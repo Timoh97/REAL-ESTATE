@@ -1,0 +1,180 @@
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+
+  {% block content %}
+  <!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Charitables</title>
+    <link rel="shortcut icon" href="assets/images/fav.png" type="image/x-icon">
+   <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="assets/images/fav.jpg">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/animate.css">
+    <link rel="stylesheet" href="assets/plugins/slider/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="assets/plugins/slider/css/owl.theme.default.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
+    <link rel="stylesheet" href="css/reset.css" type="text/css" media="all">
+<link rel="stylesheet" href="css/layout.css" type="text/css" media="all">
+<link rel="stylesheet" href="css/style.css" type="text/css" media="all">
+<script type="text/javascript" src="js/jquery-1.6.js"></script>
+<script type="text/javascript" src="js/cufon-yui.js"></script>
+<script type="text/javascript" src="js/cufon-replace.js"></script>
+<script type="text/javascript" src="js/Vegur_700.font.js"></script>
+<script type="text/javascript" src="js/Vegur_400.font.js"></script>
+<script type="text/javascript" src="js/Vegur_300.font.js"></script>
+<script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
+<script type="text/javascript" src="js/tms-0.3.js"></script>
+<script type="text/javascript" src="js/tms_presets.js"></script>
+<script type="text/javascript" src="js/backgroundPosition.js"></script>
+<script type="text/javascript" src="js/atooltip.jquery.js"></script>
+<script type="text/javascript" src="js/script.js"></script>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light" style="background: #3598dc;">
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+            
+         
+          <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+              
+            <li class="nav-item">
+                <a style="color: white;" class="navbar-brand" href="{% url 'index' %}">
+                   <img src="data:image/png;base64,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" alt="" height="30"> Home</a>
+              </li>
+              <li class="nav-item">
+                <a style="color: white;" class="navbar-brand" href="{% url 'client' %}">For Clients</a>
+              </li>
+            <li class="nav-item active">
+              <a style="color: white;" class="navbar-brand" href="{% url 'agent' %}">For Agents<span class="sr-only">(current)</span></a>
+            </li>
+    
+            <li class="nav-item">
+              <a style="color: white;" class="navbar-brand" href="{% url 'about' %}">#</a>
+            </li>
+          </ul>
+          <form class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+            <button style="color: white;" class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+          </form>
+          <ul>        <li class="navbar-brand">
+            <a style="color: white;" class="navbar-brand" href="#">Admin</a>
+          </li>
+        </ul>
+        </div>
+      </nav>
+ 
+  <!--  ************************* Page Title Starts Here ************************** -->
+        
+   
+    
+     <!--  ************************* About Us Starts Here ************************** -->    
+     <div class="about-us container-fluid">
+        <div class="container">
+    
+            <div class="row natur-row no-margin w-100">
+                <div class="text-part col-md-6">
+                    <h2>About Our Charity</h2>
+                    <p>The local charity Organizations are among the most adversely affected groups by the Covid 19 Pandemic.
+                        Majority of the donors are losing their ability to support these organizations because of the economic 
+                        impact left behind by the pandemic. Furthermore, finding new donors is also an enormous challenge, 
+                        leaving the thousands of beneficiaries impoverished. Charity is an act of kindness where someone donates what they have to the less fortunate.
+                    </p>
+                    <p> Our aim is to come up with a platform where we link both the donors and the Ngo's that need help.
+                        Having a website that one can see and access from time to time will solve both the ngo and the donor from alot of hustle.
+                        On the donor's side they get to see the approved Ngo's request from different categories,vet to see if they really deserve the funding,.
+                    </p>
+    
+                    <p>This platform will be beneficial on the NGO's side too,in that they have a better chance to be known and funded,.
+                        Having there online presence will grant them better chances of being funded by the many donors.
+                        Due to the heavy digital migration of alot of firms and businesses it's only recommendable that this two fronts also get to be seen and heard.
+                        This online will atracts alot of people from just ordinary people to moneyed people hence it will have a huge net of funds,hence the NGO's can remain afloat.
+                    </p>
+                </div>
+                <div class="image-part col-md-6">
+                    <div class="about-quick-box row">
+                        <div class="col-md-6">
+                            <div class="about-qcard">
+                               <i class="fas fa-user"></i>
+                                <p>Become a Volunteer</p>
+                            </div>
+                        </div>
+                         <div class="col-md-6">
+                            <div class="about-qcard ">
+                               <i class="fas fa-search-dollar green"></i>
+                                <p>Quick Fundraiser</p>
+                            </div>
+                        </div>
+                         <div class="col-md-6">
+                            <div class="about-qcard ">
+                               <i class="fas fa-donate green"></i>
+                                <p>Give Donation</p>
+                            </div>
+                        </div>
+                         <div class="col-md-6">
+                            <div class="about-qcard ">
+                               <i class="fas fa-hands-helping green"></i>
+                                <p>Help Someone</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>     
+       
+     <!-- ################# Mission Vision Start Here #######################--->
+      
+      <section class="container-fluid mission-vision">
+          <div class="container">
+              <div class="row mission">
+                  <div class="col-md-6 mv-det">
+                      <h1>Our Mission</h1>
+                      <p>We connect Donors and NGO's and help bridge the gap between them.
+                        Working together, we invest in the well being of the NGO's and the heart's of the donors.
+                        the donors get information at ease hence make better and informed decisions.
+                        This will help create a mutual ground to help and to also receive help.</p>
+                  </div>
+                  <div class="col-md-6 mv-img">
+                      <img src="/static/images/miss.jpg" alt="">
+                  </div>
+              </div>
+              <div class="row vision">
+                  <div class="col-md-6 mv-img">
+                       <img src="/static/images/vis.jpg" alt="">
+                  </div>
+                  <div class="col-md-6 mv-det">
+                       <h1>Our Vision</h1>
+                       <p>A world in which airing of needs is made easy and getting funds is made easier.</p>
+                  </div>
+              </div>
+          </div>
+      </section>   
+       
+    
+   
+  
+                 
+
+    
+</body>
+
+<script src="assets/js/jquery-3.2.1.min.js"></script>
+<script src="assets/js/popper.min.js"></script>
+<script src="assets/js/bootstrap.min.js"></script>
+<script src="assets/plugins/scroll-fixed/jquery-scrolltofixed-min.js"></script>
+<script src="assets/plugins/slider/js/owl.carousel.min.js"></script>
+<script src="assets/js/script.js"></script>
+<script type="text/javascript">Cufon.now();</script>
+
+</html>
+{%endblock%}
