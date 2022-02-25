@@ -8,8 +8,9 @@ path('', views.index, name='index'),
 path("login/", views.login, name="login"),
 path("signup/", views.signup, name="signup"),
 path("about/", views.about, name="about"),
-path("agent/", views.agent, name="agent"),
-path("client/", views.client, name="client"),
+path("agents/", views.agent, name="agent"),
+path("clients/", views.client, name="client"),
+path("reviews/", views.reviews, name="reviews"),
 
 #authentication
 

@@ -24,7 +24,10 @@ def client(request):
    
 
 
-
+def reviews(request):
+    
+    
+    return render(request, 'reviews.html')
 
 
 def signup(request):

@@ -1,5 +1,5 @@
 
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
 
 
   {% block content %}
@@ -9,11 +9,12 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Charitables</title>
+    <title>Real Estate</title>
     <link rel="shortcut icon" href="assets/images/fav.png" type="image/x-icon">
    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500&display=swap" rel="stylesheet">
     <link rel="shortcut icon" href="assets/images/fav.jpg">
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="assets/css/all.min.css">
     <link rel="stylesheet" href="assets/css/animate.css">
     <link rel="stylesheet" href="assets/plugins/slider/css/owl.carousel.min.css">
@@ -36,7 +37,7 @@
 <script type="text/javascript" src="js/script.js"></script>
 </head>
 
-<body>
+<body style="padding: 1em;">
     <nav class="navbar navbar-expand-lg navbar-light" style="background: #3598dc;">
 
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
@@ -52,10 +53,10 @@
                    <img src="data:image/png;base64,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" alt="" height="30"> Home</a>
               </li>
               <li class="nav-item">
-                <a style="color: white;" class="navbar-brand" href="{% url 'client' %}">For Clients</a>
+                <a style="color: white;" class="navbar-brand" href="{% url 'client' %}">For Buyers</a>
               </li>
             <li class="nav-item active">
-              <a style="color: white;" class="navbar-brand" href="{% url 'agent' %}">For Agents<span class="sr-only">(current)</span></a>
+              <a style="color: white;" class="navbar-brand" href="{% url 'agent' %}">For Sellers<span class="sr-only">(current)</span></a>
             </li>
     
             <li class="nav-item">
@@ -78,103 +79,88 @@
    
     
      <!--  ************************* About Us Starts Here ************************** -->    
-     <div class="about-us container-fluid">
-        <div class="container">
     
-            <div class="row natur-row no-margin w-100">
-                <div class="text-part col-md-6">
-                    <h2>About Our Charity</h2>
-                    <p>The local charity Organizations are among the most adversely affected groups by the Covid 19 Pandemic.
-                        Majority of the donors are losing their ability to support these organizations because of the economic 
-                        impact left behind by the pandemic. Furthermore, finding new donors is also an enormous challenge, 
-                        leaving the thousands of beneficiaries impoverished. Charity is an act of kindness where someone donates what they have to the less fortunate.
-                    </p>
-                    <p> Our aim is to come up with a platform where we link both the donors and the Ngo's that need help.
-                        Having a website that one can see and access from time to time will solve both the ngo and the donor from alot of hustle.
-                        On the donor's side they get to see the approved Ngo's request from different categories,vet to see if they really deserve the funding,.
-                    </p>
-    
-                    <p>This platform will be beneficial on the NGO's side too,in that they have a better chance to be known and funded,.
-                        Having there online presence will grant them better chances of being funded by the many donors.
-                        Due to the heavy digital migration of alot of firms and businesses it's only recommendable that this two fronts also get to be seen and heard.
-                        This online will atracts alot of people from just ordinary people to moneyed people hence it will have a huge net of funds,hence the NGO's can remain afloat.
-                    </p>
-                </div>
-                <div class="image-part col-md-6">
-                    <div class="about-quick-box row">
-                        <div class="col-md-6">
-                            <div class="about-qcard">
-                               <i class="fas fa-user"></i>
-                                <p>Become a Volunteer</p>
-                            </div>
-                        </div>
-                         <div class="col-md-6">
-                            <div class="about-qcard ">
-                               <i class="fas fa-search-dollar green"></i>
-                                <p>Quick Fundraiser</p>
-                            </div>
-                        </div>
-                         <div class="col-md-6">
-                            <div class="about-qcard ">
-                               <i class="fas fa-donate green"></i>
-                                <p>Give Donation</p>
-                            </div>
-                        </div>
-                         <div class="col-md-6">
-                            <div class="about-qcard ">
-                               <i class="fas fa-hands-helping green"></i>
-                                <p>Help Someone</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>     
-       
-     <!-- ################# Mission Vision Start Here #######################--->
-      
-      <section class="container-fluid mission-vision">
-          <div class="container">
-              <div class="row mission">
-                  <div class="col-md-6 mv-det">
-                      <h1>Our Mission</h1>
-                      <p>We connect Donors and NGO's and help bridge the gap between them.
-                        Working together, we invest in the well being of the NGO's and the heart's of the donors.
-                        the donors get information at ease hence make better and informed decisions.
-                        This will help create a mutual ground to help and to also receive help.</p>
-                  </div>
-                  <div class="col-md-6 mv-img">
-                      <img src="/static/images/miss.jpg" alt="">
-                  </div>
-              </div>
-              <div class="row vision">
-                  <div class="col-md-6 mv-img">
-                       <img src="/static/images/vis.jpg" alt="">
-                  </div>
-                  <div class="col-md-6 mv-det">
-                       <h1>Our Vision</h1>
-                       <p>A world in which airing of needs is made easy and getting funds is made easier.</p>
-                  </div>
-              </div>
-          </div>
-      </section>   
-       
-    
+    </header>
    
-  
-                 
+    <h2 class="text-center" style="color: #3598dc;">Connecting real estate agents to clients.</h2>
+    <p class="text-center" style="color: black; font-weight: bold;">"Colorful places to live and play."</p>
+    <div class="row" style=" margin: .2em; display: flex; flex-direction: row; justify-content: space-around;">
+<div class="col-4" style="border-radius: 10px; border: .2em #3598dc; background-color:#3598dc ;">
+<h4 class="text-center" style=" border-radius: 10px;">Mission</h4>
+<p style="font-weight: bold;">Our mission is to inspire a positive, lasting impact.</p>
+<p style="color: white;">We are dedicated to providing world-class service and market-leading expertise to our clients. We are passionate about providing the extra value that others simply will not.</p>
+</div>
+        <div class="col-4" style="">
+<img src="https://i.pinimg.com/736x/4d/81/ba/4d81baa0a7c6d59b19b5c84c8390fe97.jpg" alt="Real estate home" width="400px">
+        </div>
+        <div class="col-4" style="border-radius: 10px; border: .2em #3598dc; background-color:#3598dc ;">
+<h4 class="text-center" style=" border-radius: 10px;">Vision</h4>
+<p class="text-center" style="font-weight: bold;">Win, Make, Give, and Do Good.</p>
+<p style="color: white;">
 
+    We want to win at what we do, and we do all we can to help our customers, agents and employees build wealth. We love to work with people who are passionate about working hard and also giving back to their communities in a big way.</p>
+        </div>
+    </div>
     
-</body>
+    <h3 class="text-center" style="color:#3598dc">Our process</h3>
+    <div class="row" id="savingLives" style=" padding: 1.5em; display: flex; flex-direction: row; ">
+        
+        <div class="col-4 col-md-4 col-lg-4">
+        
+         <h4 class="text-center" style="font-weight: bold;  ">1.Research</h4>
+         <img class="center" src="https://cdn-icons-png.flaticon.com/512/106/106198.png" alt="research" width="100px">
+         <p>As soon as you can, start reading Web sites, newspapers, and magazines that have real estate listings. Make a note of particular homes you are interested in and see how long they stay on the market. Also, note any changes in asking prices. <br> This will give you a sense of the housing trends in specific areas.</p>
+         
+        </div>
+        <div class="col-4 col-md-4 col-lg-4 " >
+            <h4 class="text-center" style="font-weight: bold;">2.Determine expenditure</h4>
+            <img class="center" class="center" src="https://cdn-icons-png.flaticon.com/512/1761/1761422.png" alt="expenditure" width="100px">
+            
+            <p>Lenders generally recommend that people look for homes that cost no more than three to five times their annual household income if the home buyers plan to make a 20% down payment and have a moderate amount of other debt. <br>
+                Use our <a href="https://www.discover.com/home-loans/affordability-calculator/">Affordability Calculator</a> to see how much house you can afford.
+            </p>
+<button class="btn btn-primary"><a style="color: white;" href="https://www.discover.com/online-banking/banking-topics/automate-your-savings/">Bank autosave plans</a></button>
+        </div>
+        <div class="col-4 col-md-4 col-lg-4" >
+            <h4 class="text-center" style="font-weight: bold;">3.Get Prequalified and Preapproved</h4>
+            <img class="center" src="https://cdn-icons.flaticon.com/png/512/2355/premium/2355667.png?token=exp=1645790764~hmac=7dd183b47f008cd9d51fb790d5bf347c" alt="mortgage" width="100px">
+            
+            <p>To get prequalified, you just need to provide some financial information to your mortgage banker, such as your income and the amount of savings and investments you have <br>
+                This will tell you the price range of the homes you should be looking at. Later, you can get preapproved for credit, which involves providing your financial documents.</p>
+        </div>
+    </div>
+    <div class="row" id="savingLives" style=" padding:1.5em; display: flex; flex-direction: row; ">
+        
+        <div class="col-4 col-md-4 col-lg-4" >
+            <h4 class="text-center" style="font-weight: bold;">4.Find real estate agent</h4>
+         <img class="center" src="https://cdn-icons.flaticon.com/png/512/3084/premium/3084984.png?token=exp=1645791256~hmac=57a17fdf615751e76d1e8f9141ed7a85" alt="real estate agent" width="100px">
+         
+         <p>Real estate agents are important partners when you’re buying or selling a home. Real estate agents can provide you with helpful information on homes and neighborhoods that isn’t easily accessible to the public. Their knowledge of the home buying process, negotiating skills, and familiarity with the area you want to live in can be extremely valuable. And best of all, it doesn’t cost you anything to use an agent – they’re compensated from the commission paid by the seller of the house.</p>
+        </div>
+        <div class="col-4 col-md-4 col-lg-4" >
+            <h4 class="text-center" style="font-weight: bold;">5.Inspection, Shop for your home and make offer</h4>
+            <img class="center" src="data:image/png;base64,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" alt="home inspection" width="100px">
+            
+            <p>purchase offers are contingent on a home inspection of the property to check for signs of structural damage or things that may need fixing. Your real estate agent usually will help you arrange to have this inspection conducted within a few days of your offer being accepted by the seller. This contingency protects you by giving you a chance to renegotiate your offer or withdraw it without penalty if the inspection reveals significant material damage.
+                <br> Start touring homes in your price range. It might be helpful to take notes (using this helpful checklist) on all the homes you visit. You will see a lot of houses! It can be hard to remember everything about them, so you might want to take pictures or video to help you remember each home.</p>
 
-<script src="assets/js/jquery-3.2.1.min.js"></script>
-<script src="assets/js/popper.min.js"></script>
-<script src="assets/js/bootstrap.min.js"></script>
-<script src="assets/plugins/scroll-fixed/jquery-scrolltofixed-min.js"></script>
-<script src="assets/plugins/slider/js/owl.carousel.min.js"></script>
-<script src="assets/js/script.js"></script>
-<script type="text/javascript">Cufon.now();</script>
+        </div>
+        <div class="col-4 col-md-4 col-lg-4" >
+            <h4 class="text-center" style="font-weight: bold;">6.Paperwork and close sale</h4>
+            <img class="center" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQCS8QiMcFHWtudRks5B_PDqGx9gZOOrjsvfA&usqp=CAU" alt="money" width="100px">
+           
+            <p>As you can imagine, there is a lot of paperwork involved in buying a house. Your lender will arrange for a title company to handle all of the paperwork and make sure that the seller is the rightful owner of the house you are buying. <br>At closing, you will sign all of the paperwork required to complete the purchase, including your loan documents. It typically takes a couple of days for your loan to be funded after the paperwork is returned to the lender. Once the check is delivered to the seller, you are ready to move into your new home!</p>
+        </div>
+    </div>
 
+    <button class="btn btn-primary bg-info"><a style="color: white; font-size: larger;" href="{% url 'reviews' %}">website Reviews</a></button>
+<style>
+    .center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 30%;
+}
+</style>
 </html>
 {%endblock%}
