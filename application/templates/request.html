@@ -1,0 +1,66 @@
+{%extends 'base.html'%}
+
+{%block content%}
+<!DOCTYPE html>
+<html>
+<style>
+table, th, td {
+  border:1px solid black;
+}
+table {
+    margin: .5em;
+}
+</style>
+<body>
+
+<h2 class="text-center">Table for commissions</h2>
+<p class="text-center btn-primary">Check the price range for the house and pay the corresponding commission. It is after payment that we shall process your request.</p>
+<table style="width:100%">
+  <tr>
+    <th>Price range</th>
+    <th>Commission</th>
+    <th>payments</th>
+  </tr>
+  <tr>
+    <td>below 1 million</td>
+    <td>100,000</td>
+    <td><button class="btn btn-primary">make payment</button></td>
+  </tr>
+  <tr>
+    <td>1-3million</td>
+    <td></td>
+    <td><button class="btn btn-primary">make payment</button></td>
+  </tr>
+  <tr>
+    <td>>3-6million</td>
+    <td></td>
+    <td><button class="btn btn-primary">make payment</button></td>
+  </tr>
+  <tr>
+    <td>>6-9million</td>
+    <td></td>
+    <td><button class="btn btn-primary">make payment</button></td>
+  </tr>
+  <tr>
+    <td>>9-12million</td>
+    <td></td>
+    <td><button class="btn btn-primary">make payment</button></td>
+  </tr>
+  <tr>
+    <td>>12-15million</td>
+    <td></td>
+    <td><button class="btn btn-primary">make payment</button></td>
+  </tr>
+  <tr>
+    <td>>12-20million</td>
+    <td></td>
+    <td><button class="btn btn-primary">make payment</button></td>
+  </tr>
+</table>
+
+
+
+</body>
+</html>
+
+{%endblock%}

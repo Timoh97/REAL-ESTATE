@@ -29,7 +29,14 @@ def reviews(request):
     
     return render(request, 'reviews.html')
 
-
+def gallery(request):
+    
+    
+    return render(request, 'gallery.html')
+def request(request):
+    
+    
+    return render(request, 'request.html')
 def signup(request):
      '''View function to present users with account choices'''
      title = 'Sign Up'
