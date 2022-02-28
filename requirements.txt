@@ -1,6 +1,5 @@
 asgiref==3.5.0
 beautifulsoup4==4.10.0
-bootstrap4==0.1.0
 confusable-homoglyphs==3.2.0
 Django==3.2.9
 django-bootstrap4==21.2
