@@ -1,4 +1,11 @@
 from django.shortcuts import render
+from django.shortcuts import render,redirect
+from django.contrib.auth import login,authenticate,logout
+from .forms import *
+from django.contrib import messages
+from django.conf import settings
+from django.views.generic import CreateView
+from django.urls import reverse_lazy
 
 
 
@@ -38,11 +45,37 @@ def request(request):
     
     return render(request, 'request.html')
 def signup(request):
-     '''View function to present users with account choices'''
-     title = 'Sign Up'
-     return render(request,'registration/signup.html',{'title': title})
+    if request.method == 'POST':
+        form = SignUpForm(request.POST)
+        if form.is_valid():
+            form.save()
+            username = form.cleaned_data.get('username')
+            raw_password = form.cleaned_data.get('password1')
+            user = authenticate(username=username, password=raw_password)
+            login(request, user)
+            return redirect('/login')
+    else:
+        form = SignUpForm()
+    return render(request, 'registration/signup.html', {'form': form})
+
+
+    
+    return render(request,'registration/signup.html',{'form':form})
 
 def login(request):
-     '''View function to present users with account choices'''
-     title = 'Login'
-     return render(request,'registration/login.html',{'title': title})
+  form = LoginForm(request.POST or None)
+  if request.method == 'POST':
+    if form.is_valid():
+      username = form.cleaned_data.get('username')
+      password = form.cleaned_data.get('password')
+      user = authenticate(username=username,password=password)
+      if user is not None:
+       login(request,user)
+         
+      return redirect('/')
+      
+  
+  return render (request, 'registration/login.html',{'form':form})
+ 
+ 
+ #mpesa api
