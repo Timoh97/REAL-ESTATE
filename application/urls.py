@@ -16,5 +16,7 @@ path("gallery/", views.gallery, name="gallery"),
 path("request/", views.request, name="request"),
 
 #authentication
+#password restting
+
 
 ]
