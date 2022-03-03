@@ -11,6 +11,7 @@ from django.core.mail import send_mail
 
 
 
+
 # Create your views here.
 def index(request):
     
@@ -44,8 +45,14 @@ def gallery(request):
     return render(request, 'gallery.html')
 def request(request):
     
-    
-    return render(request, 'request.html')
+     if request.method == 'POST':
+        form = SignUpForm(request.POST)
+        if form.is_valid():
+            form.save()
+            redirect('/request')
+        else:
+            form=SignUpForm()
+     return render(request, 'request.html')
 
 #REGISTRATION WITH A WELCOME EMAIL
 def signup(request):
@@ -56,7 +63,7 @@ def signup(request):
             username = form.cleaned_data.get('username')
             raw_password = form.cleaned_data.get('password1')
             email = form.cleaned_data['email']
-            user = authenticate(username=username, password=raw_password)
+            user = authenticate(username=username, password=raw_password).first()
             login(request,user)
             subject = 'Welcome to the EQUINOX!'
             message = f'Hi {user.first_name},\nThe EQUINOX real estate would like to officially welcome you to our growing community.See what you would like to purchase, and contact us.\nRemember to enjoy the app!\n\nKind Regards,\nThe EQUINOX Management.'
@@ -68,27 +75,27 @@ def signup(request):
             return redirect('/login')
     else:
         form = SignUpForm()
-    return render(request, 'registration/signup.html', {'form': form})
+        return render(request, 'registration/signup.html', {'form': form})
 
 
     
     return render(request,'registration/signup.html',{'form':form})
 
+
 def loginView(request):
-  form = LoginForm(request.POST or None)
-  if request.method == 'POST':
-    if form.is_valid():
-      username = form.cleaned_data.get('username')
-      password = form.cleaned_data.get('password')
-      user = authenticate(username=username,password=password)
-      if user is not None:
-       login(request,user)
-         
-      return redirect('/')
-    else:
-        form=LoginForm()
-  
-  return render (request, 'registration/login.html',{'form':form})
- 
- 
- #mpesa api
+	if request.method == "POST":
+		form = LoginForm(request.POST)
+		if form.is_valid():
+			username = form.cleaned_data.get('username')
+			password = form.cleaned_data.get('password')
+			user = authenticate(username=username, password=password)
+			if user is not None:
+				login(request, user)
+				messages.info(request, f"You are now logged in as {username}.")
+				return redirect("/")
+			else:
+				messages.error(request,"Invalid username or password.")
+		else:
+			messages.error(request,"Invalid username or password.")
+	form = LoginForm()
+	return render(request=request, template_name="registration/login.html",context= {"form":form})
