@@ -42,8 +42,28 @@ INSTALLED_APPS = [
     'application',
     'bootstrap4',
     'crispy_forms',
+    #authentication using social sites
+    'django.contrib.sites',
+    'allauth',
+    'allauth.account',
+    'allauth.socialaccount',
+    #for google auth
+    'allauth.socialaccount.providers.google', 
 ]
 
+# social accounts providers below
+SOCIALACCOUNT_PROVIDERS = {
+    'google': {
+        'SCOPE': [
+            'profile',
+            'email',
+        ],
+        'AUTH_PARAMS': {
+            'access_type': 'online',
+        }
+    }
+}
+# social accounts providers above
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -138,3 +158,15 @@ AUTH_USER_MODEL = 'application.User'
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+#authentication to social sites everything below this
+AUTHENTICATION_BACKENDS = (
+ #used for default signin such as loggin into admin panel
+ 'django.contrib.auth.backends.ModelBackend', 
+  
+ #used for social authentications
+ 'allauth.account.auth_backends.AuthenticationBackend',
+ )
+
+SITE_ID = 1
+
+LOGIN_REDIRECT_URL = '/tutorials'

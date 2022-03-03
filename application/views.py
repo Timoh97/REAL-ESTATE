@@ -63,7 +63,7 @@ def signup(request):
             username = form.cleaned_data.get('username')
             raw_password = form.cleaned_data.get('password1')
             email = form.cleaned_data['email']
-            user = authenticate(username=username, password=raw_password).first()
+            user = authenticate(username=username, password=raw_password)
             login(request,user)
             subject = 'Welcome to the EQUINOX!'
             message = f'Hi {user.first_name},\nThe EQUINOX real estate would like to officially welcome you to our growing community.See what you would like to purchase, and contact us.\nRemember to enjoy the app!\n\nKind Regards,\nThe EQUINOX Management.'
@@ -72,7 +72,7 @@ def signup(request):
             recepient_list = [user.email]
             send_mail(subject,message,email_from,recepient_list)
             messages.success(request, 'Account created successfully! Check your email for a welcome mail')
-            return redirect('/login')
+            return redirect('login/')
     else:
         form = SignUpForm()
         return render(request, 'registration/signup.html', {'form': form})
