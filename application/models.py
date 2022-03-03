@@ -30,6 +30,7 @@ class Request(models.Model):
     email=models.EmailField(unique=True)
     phone_number=models.IntegerField()
     image=CloudinaryField('image')
+    description=models.CharField(max_length=400,default='')
     price=models.IntegerField()
     def __str__(self):
      return self.name

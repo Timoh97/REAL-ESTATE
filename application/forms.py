@@ -38,5 +38,5 @@ class LoginForm(forms.Form):
 class RequestForm(UserCreationForm):
     class Meta(UserCreationForm.Meta):
         model=Request
-        fields=['name','email','phone_number','image','price']
+        fields=['name','email','phone_number','image',"description",'price']
     

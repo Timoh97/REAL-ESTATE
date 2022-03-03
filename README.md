@@ -5,6 +5,7 @@ This is a software development project that allows house buyers to explotre and 
 # Home preview
 <img href="static/images/Screenshot from 2022-03-03 16-32-28.png">
 <img href="static/images/Screenshot from 2022-03-03 16-32-59.png">
+
 ## DESIGN
 My design practice offers a full range of services including brand strategy, interaction and visual design and user experience testing.
 Throughout the project, I design, create and implement visual design and workflows, solicit user feedback and work with you to make sure what gets built is what is needed.
