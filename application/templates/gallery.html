@@ -7,7 +7,7 @@
 
 
         <!--Django Model-->
-        <h2 class="my-4" style="text-align:center">Houses available</h2>
+        <h2 class="my-4" style="text-align:center; color: #3598dc;">Houses available</h2>
         <!-- <div class="row">
           {% for m in request %}
           <div class="col-lg-4 col-md-6 col-sm-12 pb-4">
@@ -27,16 +27,20 @@
 
       </div>
     
-      {% for product in request %}
-      <div class="col-lg-4" style="margin: .7em;">
-          <img class="thumbnail" src="{{product.image.url}}" style="width: 400px;">
-          <div class="box-element product">
-              <h6 class="text-center"><strong>{{product.name}}</strong></h6>
-              <hr>              
-              <a class="btn btn-outline-success" href="{% url 'details' %}">View details</a>
-              <h4 style="display: inline-block; float:right; "><strong>ksh {{product.price}}</strong></h4>
+      
+      <div class="row" style="margin: .7em;">
+        {% for product in request %}
+<div class="col-6">
+    <img class="thumbnail" src="{{product.image.url}}" style="width: 600px;">
+    <div class="box-element product">
+        <h6 class="text-center"><strong>{{product.name}}</strong></h6>
+        <hr>              
+        <a class="btn btn-outline-primary" href="{% url 'details' %}">View details</a>
+        <h4 style="display: inline-block; float:right; "><strong>ksh {{product.price}}</strong></h4>
 
-          </div>
+    </div>
+</div>
+{% endfor %}
       </div>
-      {% endfor %}
+      
 {% endblock %}

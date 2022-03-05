@@ -33,7 +33,7 @@ class Request(models.Model):
     plot_no=models.IntegerField(unique=True)
     trans_id=models.CharField(max_length=255, default='')
     number_of_rooms=models.IntegerField(blank=True, null=True)
-    security=models.CharField(max_length=255, default='explain')
+    security=models.CharField(max_length=255, default='')
     power_vailability=models.BooleanField(default=False)
     water_availability=models.BooleanField(default=False)
     furnished=models.CharField(default='',max_length=400)
