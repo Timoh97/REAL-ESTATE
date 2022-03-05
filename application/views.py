@@ -62,6 +62,15 @@ def gallery(request):
     
     
     return render(request, 'gallery.html')
+def search_product(request):
+    """ search function  """
+    if request.method == "POST":
+        query_name = request.POST.get('name', None)
+        if query_name:
+            results =Request.objects.filter(name__contains=query_name)
+            return render(request, 'search.html', {"results":results})
+
+    return render(request, 'search.html')
 
 def request(request):
     

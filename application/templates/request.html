@@ -68,7 +68,7 @@ table {
     <div>
   </div>
 <div class="row" style="border: .2em solid black; border-radius: 10px; padding: 1em; margin: auto;">
-  <marquee behavior="alternate" direction="right"><h3>Use Commission calculator and make advertisement request using form below</h3></marquee>
+  <marquee behavior="alternate" direction="right"><h3>Use Commission calculator and make advertisement request using button below</h3></marquee>
   <div class="col-6" style="border-right: .1em solid #3598dc;">
     
     <p>If your price is not in commissions table <br> you can use our automated calculator</p>
@@ -105,13 +105,13 @@ table {
 <div class="modal-body" style="margin-left: 1.8em;">
   <form method="post" style="margin: auto;" enctype="multipart/form-data">
     {% csrf_token %}
-     <br>  {{form|crispy}}
+      {{form|crispy}}
         <button class="btn btn-primary my-4" type="submit">Submit</button>
   </form>
 </div>
 <div class="modal-footer">
 </div>
-  <input class="btn btn-default" data-dismiss="modal" type="text" value="close">
+  <input class="btn btn-primary" data-dismiss="modal" type="text" value="close">
 </div>
 </div>
  </div>
@@ -140,6 +140,14 @@ table {
 
         }
 }
+
+</script>
+<script>
+  $(document).ready(function(){
+  setTimeout(function(){
+$('#myModal').show();
+  },4000);
+})
 </script>
 <script
   src="https://code.jquery.com/jquery-3.6.0.js"
