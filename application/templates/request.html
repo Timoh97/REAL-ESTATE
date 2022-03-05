@@ -67,18 +67,32 @@ table {
     <div>
   </div>
 <div class="row">
+  <marquee behavior="alternate" direction="right"><h3>Use Commission calculator and make advertisement request using form below</h3></marquee>
   <div class="col-6">
-    <h3>Commission calculator</h3>
+    
     <p>If your price is not in commissions table <br> you can use our automated calculator</p>
     <ul>
       <li>Enter amount of your house</li>
       <li>Submit the amount</li>
       <li>Pay the amount as per the computation</li>
+      <form class="row-md-2 valid-form" id="form" method="POST">
+        {% csrf_token %}
+        <fieldset>
+ 
+          Date:<input class="row" type="number" placeholder="Amount in Ksh" id="amount">
+
+        </fieldset>
+        <br>
+        <input type="submit" value="Submit" id="submitButton" class="btn btn-primary" onclick="generateName(); return false"/>
+      </form>
+      <div class="result" >
+    <h2 class="text-center1 mt-1" id="result">RESULTS</h2>
+  
     </ul>
       </div>
       <div class="col-6">
     
-        <h3 class="my-4">Make a request to advertise <br> after you have made payment</h3>
+       
     
         <form method="post" enctype="multipart/form-data">
           {% csrf_token %}
@@ -88,6 +102,7 @@ table {
       </div>
 </div>
 </body>
+<script src="static/script.js"></script>
 </html>
 
 {%endblock%}

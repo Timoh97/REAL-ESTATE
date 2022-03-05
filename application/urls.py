@@ -14,7 +14,7 @@ path("agents/", views.agent, name="agent"),
 path("clients/", views.client, name="client"),
 path("reviews/", views.reviews, name="reviews"),
 path("gallery/", views.gallery, name="gallery"),
-# path("upload/", views.upload, name="upload"),
+path("details/", views.details, name="details"),
 path("request/", views.request, name="request")
 # path("password_reset", views.password_reset_request, name="password_reset")
 

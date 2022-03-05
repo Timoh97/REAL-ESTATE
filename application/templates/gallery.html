@@ -8,7 +8,7 @@
 
         <!--Django Model-->
         <h2 class="my-4">Houses available</h2>
-        <div class="row">
+        <!-- <div class="row">
           {% for m in request %}
           <div class="col-lg-4 col-md-6 col-sm-12 pb-4">
             <div class="card h-100 p-4">
@@ -23,9 +23,23 @@
           {% empty %}
           <p>No houses available added.</p>
           {% endfor %}
-        </div>
+        </div> -->
 
       </div>
     
+      {% for product in request %}
+      <div class="col-lg-4">
+          <img class="thumbnail" src="{{product.image.url}}">
+          <div class="box-element product">
+              <h6 class="text-center"><strong>{{product.name}}</strong></h6>
+              <hr>
 
+              <button data-product="{{product.id}}" data-action="add" class="btn btn-outline-secondary add-btn update-cart">Add to Cart</button>
+              
+              <a class="btn btn-outline-success" href="{% url 'details' %}">View</a>
+              <h4 style="display: inline-block; float:right"><strong>ksh {{product.price}}</strong></h4>
+
+          </div>
+      </div>
+      {% endfor %}
 {% endblock %}

@@ -50,9 +50,13 @@ def client(request):
 
 
 def reviews(request):
+    requests = Request.objects.all()
     
+    return render(request, 'reviews.html',context={'request':requests})
+def details(request):
+    requests = Request.objects.all()
     
-    return render(request, 'reviews.html')
+    return render(request, 'house_details.html',context={'request':requests})
 
 def gallery(request):
     
@@ -70,7 +74,7 @@ def request(request):
      return render(request, 'request.html',context={'form':form})
 
 def gallery(request):
-    requests = Request.objects.all(admin_approved=True)
+    requests = Request.objects.all()
     return render(request=request, template_name='gallery.html',context={'request':requests})
 
 #REGISTRATION WITH A WELCOME EMAIL
