@@ -11,17 +11,17 @@ table {
     margin: .5em;
 }
 </style>
-<body>
+<body >
   
 
 {% load crispy_forms_tags %}
 
-<div class="row">
+<div class="row" style="margin-bottom: 1em;">
 
-  <div class="col-12">
+  <div class="col-12" style="margin-bottom: .9em;">
     <h2 class="text-center">Table for commissions</h2>
-    <p class="text-center btn-primary">Check the price range for the house and pay the corresponding commission. It is after payment that we shall process your request.</p>
-    <table style="width:100%">
+    <p class="text-center">Check the price range for the house and pay the corresponding commission. It is after payment that we shall process your request.</p>
+    <table style="width:70%; margin: auto; padding: 1em; ">
       <tr>
         <th>Price range</th>
         <th>Commission</th>
@@ -66,16 +66,16 @@ table {
     
     <div>
   </div>
-<div class="row">
+<div class="row" style="border: .2em solid black; border-radius: 10px; padding: 1em; margin: auto;">
   <marquee behavior="alternate" direction="right"><h3>Use Commission calculator and make advertisement request using form below</h3></marquee>
-  <div class="col-6">
+  <div class="col-6" style="border-right: .1em solid blue;">
     
     <p>If your price is not in commissions table <br> you can use our automated calculator</p>
     <ul>
       <li>Enter amount of your house</li>
       <li>Submit the amount</li>
       <li>Pay the amount as per the computation</li>
-      <form class="row-md-2 valid-form" id="form" method="POST">
+      <form class="row-md-2 valid-form"  id="form" method="POST">
         {% csrf_token %}
         <fieldset>
  
@@ -94,10 +94,10 @@ table {
     
        
     
-        <form method="post" enctype="multipart/form-data">
+        <form method="post" style="margin: auto;" enctype="multipart/form-data">
           {% csrf_token %}
             {{form|crispy}}
-              <button class="btn btn-dark my-4" type="submit">Submit</button>
+              <button class="btn btn-primary my-4" type="submit">Submit</button>
         </form>
       </div>
 </div>
