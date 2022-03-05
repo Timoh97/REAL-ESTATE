@@ -16,7 +16,7 @@ path("reviews/", views.reviews, name="reviews"),
 path("gallery/", views.gallery, name="gallery"),
 path("details/", views.details, name="details"),
 path("request/", views.request, name="request"),
-path("search/", views.search_product, name="search")
+# path("search/", views.search_product, name="search")
 # path("password_reset", views.password_reset_request, name="password_reset")
 
 #authentication
