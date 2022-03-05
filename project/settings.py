@@ -152,7 +152,7 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
 
-STATIC_URL = '/static/'
+
 AUTH_USER_MODEL = 'application.User'
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
@@ -166,7 +166,10 @@ AUTHENTICATION_BACKENDS = (
  #used for social authentications
  'allauth.account.auth_backends.AuthenticationBackend',
  )
+STATIC_URL = '/static/'
+MEDIA_URL = '/media/'
 
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 SITE_ID = 1
 
 LOGIN_REDIRECT_URL = '/tutorials'

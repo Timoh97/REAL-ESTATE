@@ -35,8 +35,22 @@ class LoginForm(forms.Form):
         )
     )
     
-class RequestForm(UserCreationForm):
-    class Meta(UserCreationForm.Meta):
+class RequestForm(forms.ModelForm):
+    class Meta(forms.ModelForm):
         model=Request
-        fields=['name','email','phone_number','image',"description",'price']
+        fields=[
+                'name',
+                'email',
+                'phone_number',
+                "description",
+                'trans_id',
+                'number_of_rooms',
+                'plot_no',
+                'price',
+                'image',
+                "furnished",
+                "security",
+                "water_availability",
+                "power_vailability"
+                ]
     

@@ -3,6 +3,7 @@
 
 # Create your models here.
 import email
+from email.policy import default
 from enum import unique
 from django.db import models
 
@@ -27,11 +28,22 @@ class User(AbstractUser):
      return self.username
 class Request(models.Model):
     name=models.CharField(max_length=255)
-    email=models.EmailField(unique=True)
-    phone_number=models.IntegerField()
-    image=CloudinaryField('image')
+    email=models.EmailField(unique=False)
+    phone_number=models.IntegerField(blank=False)
+    plot_no=models.IntegerField(unique=True)
+    trans_id=models.CharField(max_length=255, default='explain')
+    number_of_rooms=models.IntegerField(blank=True, null=True)
+    security=models.CharField(max_length=255, default='explain')
+    power_vailability=models.BooleanField(default=False)
+    water_availability=models.BooleanField(default=False)
+    furnished=models.CharField(default='Give brief description',max_length=400)
+    # image=CloudinaryField('image')
+    image = models.ImageField(upload_to='images/')
     description=models.CharField(max_length=400,default='')
-    price=models.IntegerField()
+    price=models.IntegerField(blank=False)
+    datetime = models.DateTimeField(auto_now=True)
+    USERNAME_FIELD = 'username'
+    
     def __str__(self):
      return self.name
 

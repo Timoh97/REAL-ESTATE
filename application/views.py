@@ -58,16 +58,20 @@ def gallery(request):
     
     
     return render(request, 'gallery.html')
+
 def request(request):
     
      if request.method == 'POST':
-        form = SignUpForm(request.POST)
+        form = RequestForm(request.POST, request.FILES)
         if form.is_valid():
             form.save()
-            redirect('/request')
-        else:
-            form=SignUpForm()
-     return render(request, 'request.html')
+            return redirect("request")
+     form=RequestForm()
+     return render(request, 'request.html',context={'form':form})
+
+def gallery(request):
+    requests = Request.objects.all(admin_approved=True)
+    return render(request=request, template_name='gallery.html',context={'request':requests})
 
 #REGISTRATION WITH A WELCOME EMAIL
 def signup(request):

@@ -3,6 +3,7 @@ from django.urls import path
 from . import views
 
 
+# app_name = "application" 
 
 urlpatterns = [
 path('', views.index, name='index'),
@@ -13,8 +14,9 @@ path("agents/", views.agent, name="agent"),
 path("clients/", views.client, name="client"),
 path("reviews/", views.reviews, name="reviews"),
 path("gallery/", views.gallery, name="gallery"),
-path("request/", views.request, name="request"),
-path("password_reset", views.password_reset_request, name="password_reset")
+# path("upload/", views.upload, name="upload"),
+path("request/", views.request, name="request")
+# path("password_reset", views.password_reset_request, name="password_reset")
 
 #authentication
 #password restting
