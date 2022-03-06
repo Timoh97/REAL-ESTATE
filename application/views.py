@@ -7,7 +7,7 @@ from django.conf import settings
 from django.views.generic import CreateView
 from django.urls import reverse_lazy
 from django.core.mail import send_mail
-
+from django.contrib.auth.decorators import login_required
 #importations for resetting password via email
 from django.shortcuts import render, redirect
 from django.core.mail import send_mail, BadHeaderError
@@ -36,7 +36,7 @@ def about(request):
     
     
     return render(request, 'about.html')
-
+@login_required(login_url='/login')
 def agent(request):
         
     
@@ -71,7 +71,7 @@ def gallery(request):
 #             return render(request, 'search.html', {"results":results})
 
 #     return render(request, 'search.html')
-
+@login_required(login_url='/login')
 def request(request):
     
      if request.method == 'POST':
