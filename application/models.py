@@ -42,6 +42,7 @@ class Request(models.Model):
     description=models.CharField(max_length=400,default='')
     price=models.IntegerField(blank=False)
     datetime = models.DateTimeField(auto_now=True)
+    admin_approved = models.BooleanField(default=False)
     USERNAME_FIELD = 'username'
     
     def __str__(self):

@@ -50,18 +50,18 @@ def client(request):
 
 
 def reviews(request):
-    requests = Request.objects.all()
     
-    return render(request, 'reviews.html',context={'request':requests})
+    
+    return render(request, 'reviews.html')
 def details(request):
-    requests = Request.objects.all()
+    requests = Request.objects.filter(admin_approved=True)
     
     return render(request, 'house_details.html',context={'request':requests})
 
-def gallery(request):
+# def gallery(request):
+#     requests = Request.objects.filter(admin_approved=True)
     
-    
-    return render(request, 'gallery.html')
+#     return render(request, 'gallery.html',context={'requesting':requests})
 # def search_product(request):
 #     """ search function  """
 #     if request.method == "POST":
@@ -83,7 +83,7 @@ def request(request):
      return render(request, 'request.html',context={'form':form})
 
 def gallery(request):
-    requests = Request.objects.all()
+    requests = Request.objects.filter(admin_approved=True)
     return render(request=request, template_name='gallery.html',context={'request':requests})
 
 #REGISTRATION WITH A WELCOME EMAIL
