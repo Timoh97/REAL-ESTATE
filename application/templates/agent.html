@@ -1,16 +1,34 @@
 {%extends 'base.html'%}
 {% block content %} 
 
-<div>
-    <div>
-        <div>
-            Fill the form to submit the request to advertise with us <br>
-            Make the payments and wait for your approval request, <br>
-we do not approve requests whose payments are not done. <br>
-Request approval might take at most 2 working days.
-  
-            </div>
-            <button class="btn btn-primary"><a style="color: white;" href="{% url 'request' %}">Make request</a></button>
+<div class="">
+    <div class="row" style="margin: 2em;">
+   
+       
+            <div class="col-4 btn-outline-primary" style="padding: 2em; display: flex; flex-wrap: wrap;">
+                1. Fill the form to submit the request to advertise with us <br>
+                Make the payments and wait for your approval request, <br>
+    we do not approve requests whose payments are not done. <br>
+    Request approval might take at most 2 working days. <br> <br>
+    <a style="color: white; padding: 2em;" href="{% url 'request' %}"><button class="btn btn-primary">Make request</button></a>
+                </div>
+                <div class="col-4  btn-outline-primary" style="padding: 2em;">
+                    <p>
+                        2. Visit our premises with the documents of the house and we shall assign you to one of our officials to work with you.
+                    </p>
+                    <p>Be ready to sign an agreement form with us.</p>
+                </div>
+        
+            <div class="col-4" style="padding: 2em;">
+                <img src="https://cdn.pixabay.com/photo/2019/03/27/16/21/contract-4085336_960_720.jpg" alt="" height="250px">
+                <br> <br>
+                <p class="text-center"><strong>Sign contract</strong></p>
+              </div>   
+       
+   
+    
+
+
         </div>
         </div>
     </div>

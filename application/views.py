@@ -104,7 +104,7 @@ def signup(request):
             recepient_list = [user.email]
             send_mail(subject,message,email_from,recepient_list)
             messages.success(request, 'Account created successfully! Check your email for a welcome mail')
-            return redirect('login/')
+            return redirect('/login/')
     else:
         form = SignUpForm()
         return render(request, 'registration/signup.html', {'form': form})
@@ -163,3 +163,12 @@ def password_reset_request(request):
 					return redirect ("/password_reset/done/")
 	password_reset_form = PasswordResetForm()
 	return render(request=request, template_name="registration/password_reset.html", context={"password_reset_form":password_reset_form})
+
+
+
+
+
+	
+	
+				
+	

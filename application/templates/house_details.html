@@ -27,11 +27,11 @@
 
 
   {% for product in request %}
-  <div class="row" style="margin: .5em;">
+  <div class="row" style="margin: .9em;">
       <div class="box-element product col-lg-4">
         <img class="thumbnail" src="{{product.image.url}}" style="width: 400px;">
         <h4 style="display: inline-block; float:left; margin-top: .2em; ">Call: <button class="btn btn-outline-primary"><strong> {{product.phone_number}}</strong> </button></h4>
-          <h4 style="display: inline-block; float:right; margin-top: .2em;">Ksh.<button class="btn btn-outline-primary"><strong> {{product.price}}</strong> </button></h4>
+          <h4 style="display: inline-block; float:right; margin-top: .2em;">Ksh <button class="btn btn-outline-primary"><strong> {{product.price}}</strong> </button></h4>
       </div>
       <div class="box-element product col-lg-8" style="border-left: .1em solid blue;">
           <h5 class="text-center">Agent: <strong>{{product.name}}</strong></h5>
