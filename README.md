@@ -67,6 +67,13 @@ The project is working as required,fully responsive and has no known bugs.
 
 python manage.py server
 
+## preview
+ <img src="./screenshots/1.png" alt="screenshot" />
+
+  <img src="./screenshots/2.png" alt="screenshot" />
+
+  <img src="./screenshots/3.png" alt="screenshot" />
+
 ## LIVE LINK
 
  ## LICENSE AND COPYRIGHT

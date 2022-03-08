@@ -121,7 +121,11 @@ cloudinary.config(
 )
 
 
-
+EMAIL_USE_TLS = True
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_HOST_USER = 'timothy.nthiga@student.moringaschool.com'
+EMAIL_HOST_PASSWORD = 'Timoh@1997'
+EMAIL_PORT = 587
 
 
 # Password validation
