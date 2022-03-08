@@ -2,9 +2,7 @@
 REAL-ESTATE 
 # DESCRIPTION
 This is a software development project that allows house buyers to explotre and purchase houses from real estate agents and individual sellers.
-# Home preview
-<img href="static/images/Screenshot from 2022-03-03 16-32-28.png">
-<img href="static/images/Screenshot from 2022-03-03 16-32-59.png">
+
 
 ## DESIGN
 My design practice offers a full range of services including brand strategy, interaction and visual design and user experience testing.
@@ -67,7 +65,7 @@ The project is working as required,fully responsive and has no known bugs.
 
 python manage.py server
 
-## preview
+## Home preview
  <img src="./screenshots/1.png" alt="screenshot" />
 
   <img src="./screenshots/2.png" alt="screenshot" />
